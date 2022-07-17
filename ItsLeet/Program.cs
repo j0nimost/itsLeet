@@ -1,9 +1,16 @@
-﻿// See https://aka.ms/new-console-template for more information
-using ItsLeet.Tree;
+﻿using ItsLeet.Sorting;
+using System.Diagnostics;
 
-int result = 0;
 
-Console.WriteLine(result);
+SortColorSolution SortColorSolution = new SortColorSolution();
 
+//};
+int[] arr = new int[] { 45,56,7,5,3,52,5,7,2,6,7,3,552,7,25,6};
+
+SortColorSolution.SortColors(arr);
+
+
+
+Console.WriteLine(0);
 
 Console.ReadLine();
