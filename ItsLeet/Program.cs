@@ -2,15 +2,19 @@
 using System.Diagnostics;
 
 
-SortColorSolution SortColorSolution = new SortColorSolution();
+GroupAnagramSolution GroupAnagram = new GroupAnagramSolution();
+IList<IList<string>> results = GroupAnagram.GroupAnagrams(new[] { "eat", "tea", "tan", "ate", "nat", "bat" });
+//IList<IList<string>> results = GroupAnagram.GroupAnagrams(new[] { "eat", "tea", "tan", "ate", "nat", "bat" });
+//IList<IList<string>> results = GroupAnagram.GroupAnagrams(new[] { "a" });
 
-//};
-int[] arr = new int[] { 45,56,7,5,3,52,5,7,2,6,7,3,552,7,25,6};
-
-SortColorSolution.SortColors(arr);
-
-
-
-Console.WriteLine(0);
+foreach (var result in results)
+{
+    Console.Write('[');
+    foreach (string r in result)
+    {
+        Console.Write(r + ',');
+    }
+    Console.Write("], ");
+}
 
 Console.ReadLine();
