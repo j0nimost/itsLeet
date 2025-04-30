@@ -11,7 +11,7 @@ namespace ItsLeet.Sorting
         public IList<IList<int>> ThreeSum(int[] nums)
         {
 
-            Array.Sort(nums);
+            System.Array.Sort(nums);
             HashSet<string> set = new HashSet<string>();
             IList<IList<int>> listF = new List<IList<int>>();
             IList<int> minSum = new List<int>();

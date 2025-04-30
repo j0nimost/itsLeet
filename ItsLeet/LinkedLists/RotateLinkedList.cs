@@ -43,11 +43,11 @@ namespace ItsLeet.LinkedLists
 
                 if (resultNode == null)
                 {
-                    resultNode = new ListNode(listNodes[i].val);
+                    resultNode = new ListNode(listNodes[i].val, null);
                 }
                 else
                 {
-                    ListNode newNode = new ListNode(listNodes[i].val);
+                    ListNode newNode = new ListNode(listNodes[i].val, null);
                     newNode.next = resultNode;
                     resultNode = newNode;
                 }

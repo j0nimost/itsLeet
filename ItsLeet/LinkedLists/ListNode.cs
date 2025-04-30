@@ -10,10 +10,10 @@ namespace ItsLeet.LinkedLists
     {
         public int val;
         public ListNode next;
-        public ListNode(int x)
+        public ListNode(int x, ListNode next)
         {
             val = x;
-            next = null;
+            this.next = next;
         }
     }
 }

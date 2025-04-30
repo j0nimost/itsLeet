@@ -9,18 +9,18 @@ namespace ItsLeet.Tree
 
     internal class SameTreeAlgorithm
     {
-        public bool IsSameTree(TreeNode p, TreeNode q)
+        public bool IsSameTree(TreeNode? p, TreeNode? q)
         {
-            Queue<TreeNode> p_queue = new Queue<TreeNode>();
-            Queue<TreeNode> q_queue = new Queue<TreeNode>();
+            Queue<TreeNode?> pQueue = new Queue<TreeNode?>();
+            Queue<TreeNode?> qQueue = new Queue<TreeNode?>();
 
-            p_queue.Enqueue(p);
-            q_queue.Enqueue(q);
+            pQueue.Enqueue(p);
+            qQueue.Enqueue(q);
 
-            while(p_queue.Count > 0 && q_queue.Count > 0)
+            while(pQueue.Count > 0 && qQueue.Count > 0)
             {
-                TreeNode pnode = p_queue.Dequeue();
-                TreeNode qnode = q_queue.Dequeue();
+                TreeNode? pnode = pQueue.Dequeue();
+                TreeNode? qnode = qQueue.Dequeue();
 
                 if (pnode == null && qnode == null)
                     continue;
@@ -31,12 +31,12 @@ namespace ItsLeet.Tree
                 if (pnode.val != qnode.val)
                     return false;
 
-                p_queue.Enqueue(pnode.left);
-                q_queue.Enqueue(qnode.left);
-                p_queue.Enqueue(pnode.right);
-                q_queue.Enqueue(qnode.right);
+                pQueue.Enqueue(pnode.left);
+                qQueue.Enqueue(qnode.left);
+                pQueue.Enqueue(pnode.right);
+                qQueue.Enqueue(qnode.right);
             }
-            return p_queue.Count == q_queue.Count;
+            return pQueue.Count == qQueue.Count;
         }
 
     }

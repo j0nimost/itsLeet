@@ -58,11 +58,11 @@ namespace ItsLeet.LinkedLists
 
             // form a linked list
 
-            ListNode sumList = new ListNode(sumString[0] - '0');
+            ListNode sumList = new ListNode(sumString[0] - '0', null);
 
             for (int i = 1; i < sumString.Length; i++)
             {
-                ListNode nextNode = new ListNode(sumString[i] - '0');
+                ListNode nextNode = new ListNode(sumString[i] - '0', null);
                 nextNode.next = sumList;
                 sumList = nextNode;
             }

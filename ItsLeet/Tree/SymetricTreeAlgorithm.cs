@@ -13,7 +13,7 @@ namespace ItsLeet.Tree
             return IsSymetricTree(root.left, root.right);
         }
 
-        public bool IsSymetricTree(TreeNode n1, TreeNode n2)
+        public bool IsSymetricTree(TreeNode? n1, TreeNode? n2)
         {
             if (n1 == null && n2 == null)
                 return true;

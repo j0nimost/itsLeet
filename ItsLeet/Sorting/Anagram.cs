@@ -53,8 +53,8 @@ namespace ItsLeet.Sorting
             char[] lArr = new char[n1];
             char[] rArr = new char[n2];
 
-            Array.Copy(arr, l, lArr, 0, n1);
-            Array.Copy(arr, m+1, rArr, 0, n2);
+            System.Array.Copy(arr, l, lArr, 0, n1);
+            System.Array.Copy(arr, m+1, rArr, 0, n2);
 
 
             int i = 0, j=0;

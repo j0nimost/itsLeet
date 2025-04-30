@@ -19,7 +19,7 @@ namespace ItsLeet.Tree
     public class BinaryTreeInorderTraversal
     {
         private IList<int> result = new List<int>();
-        public IList<int> InorderTraversal(TreeNode root)
+        public IList<int> InorderTraversal(TreeNode? root)
         {
             if (root == null) return result;
 

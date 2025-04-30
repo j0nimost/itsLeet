@@ -8,7 +8,7 @@ namespace ItsLeet.Tree
 {
     public class MaximumDepth
     {
-        public int MaxDepth(TreeNode root)
+        public int MaxDepth(TreeNode? root)
         {
 
             if(root == null)

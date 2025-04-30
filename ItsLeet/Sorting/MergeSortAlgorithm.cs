@@ -1,28 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ItsLeet.Sorting
+﻿namespace ItsLeet.Sorting
 {
     internal class MergeSortAlgorithm
     {
-        public void sort(int[] arr, int l, int r)
+        public void Sort(int[] arr, int l, int r)
         {
             if(l < r)
             {
                 int m = l + (r - l) / 2;
-                sort(arr, l, m);
-                sort(arr, m+1, r);
+                Sort(arr, l, m);
+                Sort(arr, m+1, r);
                 // merge arrays
 
-                merge(arr, l, m, r);
+                Merge(arr, l, m, r);
             }
 
         }
 
-        private void merge(int[] arr, int l, int m, int r)
+        private static void Merge(int[] arr, int l, int m, int r)
         {
             int n1 = m - l + 1;
             int n2 = r - m;
@@ -30,8 +24,8 @@ namespace ItsLeet.Sorting
             int[] lArr = new int[n1];
             int[] rArr = new int[n2];
 
-            Array.Copy(arr, l, lArr, 0, n1);
-            Array.Copy(arr, m+1, rArr, 0, n2);
+            System.Array.Copy(arr, l, lArr, 0, n1);
+            System.Array.Copy(arr, m+1, rArr, 0, n2);
 
             int i=0,j =0;
 

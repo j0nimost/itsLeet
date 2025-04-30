@@ -8,7 +8,7 @@ namespace ItsLeet.Tree
 {
     internal class BalancedBinaryTree
     {
-        private int MaxDepth(TreeNode root)
+        private int MaxDepth(TreeNode? root)
         {
 
             if (root == null)
@@ -17,7 +17,7 @@ namespace ItsLeet.Tree
             return Math.Max(MaxDepth(root.left), MaxDepth(root.right)) + 1;
         }
 
-        public bool IsBalanced(TreeNode root)
+        public bool IsBalanced(TreeNode? root)
         {
             if(root == null)
                 return true;
